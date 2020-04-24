@@ -13,7 +13,7 @@ import math
 
 """global variable
 """
-model_file = 'news_12g_baidubaike_20g_novel_90g_embedding_64.bin'
+model_file = 'GoogleNews-vectors-negative300.bin'
 model = gensim.models.KeyedVectors.load_word2vec_format(
     model_file, binary=True, limit=50000)
 
