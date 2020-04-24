@@ -89,7 +89,7 @@ def section_similarity(str1=None, str2=None):
 
 if __name__ == '__main__':
     ctu = 'yes'
-    str="To maintain the privilege of using the ArgoNet account to access UWF eLearning online courses, STUDENT acknowledges that he or she is responsible for maintaining the confidentiality of the password and account, and that he or she is fully responsible for all activities that occur under his or her account."
+    str = "To maintain the privilege of using the ArgoNet account to access UWF eLearning online courses, STUDENT acknowledges that he or she is responsible for maintaining the confidentiality of the password and account, and that he or she is fully responsible for all activities that occur under his or her account."
     while ctu == 'yes':
         print(sentence_similarity(str, str))
         ctu = input('是否继续(yes/no)：')
