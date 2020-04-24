@@ -5,7 +5,7 @@
 # Filename: run.pyw
 
 from tkinter import *
-from match import section_similarity
+from match import section_similarity, sentence_similarity
 
 
 class App(Frame):
@@ -22,16 +22,16 @@ class App(Frame):
         self.result = Entry(self, width=20)
         self.result.pack()
         # 交互部分
-        self.text1.insert(INSERT, "输入标准答案")
-        self.text2.insert(INSERT, "输入学生答案")
+        self.text1.insert(INSERT, "The standard answer")
+        self.text2.insert(INSERT, "The user answer")
         self.match = StringVar()
-        self.match.set("相似度：")
+        self.match.set("similarity: ")
         self.result.config(textvariable=self.match)
 
     def upper(self):
         str1 = self.text1.get("0.0", "end").strip('\n')
         str2 = self.text2.get("0.0", "end").strip('\n')
-        self.match.set('相似度：{:.2%}'.format(section_similarity(str1, str2)))
+        self.match.set('similarity: {:.2%}'.format(sentence_similarity(str1, str2)))
 
 
 if __name__ == '__main__':

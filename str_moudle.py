@@ -24,6 +24,8 @@ def sentence2words(str):
         if word not in stopWords:
             wordsFiltered.append(word.lower())
     words['cws'] = wordsFiltered
+    for i in words['cws']:
+        words['use'].append(False)
     return words
 
 

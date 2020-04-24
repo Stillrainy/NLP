@@ -30,6 +30,8 @@ def word_similarity(word_1, word_2):
         similarity = 1-math.acos(model.similarity(word_1, word_2))/math.pi
     except KeyError:
         similarity = 0
+    except ValueError:
+        similarity = 1
     return {
         'status': True,
         'data': {'similarity': similarity, 'word1_weight': word_1_vec.tolist(), 'word2_weight': word_2_vec.tolist()}
